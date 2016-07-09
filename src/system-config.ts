@@ -7,16 +7,17 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'angular2-localstorage': 'vendor/angular2-localstorage/dist',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-localstorage': { defaultExtension: 'js' },
 };
 
 const materialPkgs: string[] = [
   'core',
-  'button',
-  'card',
+  'input',
 ];
 
 materialPkgs.forEach((pkg) => {
@@ -44,6 +45,7 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/token',
   /** @cli-barrel */
 ];
 
@@ -60,6 +62,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     '@angular2-material': 'vendor/@angular2-material',
+    'angular2-localstorage': 'node_modules/angular2-localstorage',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js',
   },
