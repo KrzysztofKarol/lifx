@@ -4,7 +4,7 @@ import {
   beforeEach, beforeEachProviders,
   describe, xdescribe,
   expect, it, xit,
-  async, inject
+  async, inject,
 } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 

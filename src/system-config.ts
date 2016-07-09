@@ -13,6 +13,16 @@ const map: any = {
 const packages: any = {
 };
 
+const materialPkgs: string[] = [
+  'core',
+  'button',
+  'card',
+];
+
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = { main: `${pkg}.js` };
+});
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
@@ -49,10 +59,11 @@ declare var System: any;
 System.config({
   map: {
     '@angular': 'vendor/@angular',
+    '@angular2-material': 'vendor/@angular2-material',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
   },
-  packages: cliSystemConfigPackages
+  packages: cliSystemConfigPackages,
 });
 
 // Apply the user's configuration.
